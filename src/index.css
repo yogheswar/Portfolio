@@ -17,18 +17,14 @@
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
   }
 
   body {
     background-color: #050505;
     color: #F5F5F5;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    overflow-x: hidden;
     width: 100%;
-    max-width: 100vw;
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,6 +32,16 @@
 
   h1, h2, h3, h4, .font-heading {
     font-family: 'Space Grotesk', 'Sora', sans-serif;
+  }
+
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 96px;
+    }
   }
 }
 
@@ -58,6 +64,13 @@
 }
 
 @layer utilities {
+  .container-editorial {
+    width: min(100% - clamp(24px, 4vw, 48px), 1500px);
+    margin-inline: auto;
+    padding-left: clamp(12px, 2vw, 24px);
+    padding-right: clamp(12px, 2vw, 24px);
+  }
+
   @keyframes slideRTL {
     0% {
       transform: translate3d(0, 0, 0);

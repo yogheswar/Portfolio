@@ -55,12 +55,12 @@ export const Achievements: React.FC = () => {
   return (
     <section
       id="achievements"
-      className="relative py-20 sm:py-32 lg:py-44 border-b border-white/[0.08] overflow-hidden bg-[#050505] w-full max-w-full"
+      className="relative py-[clamp(4.5rem,7.5vw,9.5rem)] border-b border-white/[0.08] overflow-clip bg-[#050505] w-full"
     >
       {/* Background Subtle Ambience */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[320px] sm:w-[600px] h-[320px] sm:h-[600px] bg-[#E50914]/[0.02] rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-8 lg:px-12 relative z-10 w-full">
+      <div className="container-editorial relative z-10">
         
         {/* Section Heading with Staggered Visual Rhythm */}
         <motion.div

@@ -33,9 +33,9 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      className="relative py-20 sm:py-32 lg:py-44 border-b border-white/[0.08] overflow-hidden bg-[#050505] w-full max-w-full"
+      className="relative py-[clamp(4.5rem,7.5vw,9.5rem)] border-b border-white/[0.08] overflow-clip bg-[#050505] w-full"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 w-full">
+      <div className="container-editorial">
         
         {/* Section Heading & Large Editorial Headline */}
         <motion.div
@@ -52,7 +52,7 @@ export const Contact: React.FC = () => {
             </span>
           </div>
 
-          <div className="text-[clamp(2.4rem,8.5vw,4.5rem)] sm:text-7xl md:text-8xl lg:text-9xl font-bold font-heading text-[#F5F5F5] tracking-tight leading-[0.94] break-words">
+          <div className="text-[clamp(2.4rem,6.8vw,6.5rem)] font-bold font-heading text-[#F5F5F5] tracking-tight leading-[0.94] break-words">
             LET'S BUILD <br />
             <span className="text-white hover:text-[#E50914] transition-colors duration-500 inline-block">
               SOMETHING<span className="text-[#E50914]">.</span>

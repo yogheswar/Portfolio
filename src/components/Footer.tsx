@@ -8,8 +8,8 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="relative py-12 sm:py-16 lg:py-20 bg-[#050505] text-[#999999] border-t border-white/[0.08] w-full max-w-full overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 sm:gap-10 w-full">
+    <footer className="relative py-12 sm:py-16 lg:py-20 bg-[#050505] text-[#999999] border-t border-white/[0.08] w-full overflow-hidden">
+      <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8 sm:gap-10 w-full">
         
         {/* Left: Name and Title + Status badge */}
         <div className="space-y-2">

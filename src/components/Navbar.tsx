@@ -70,10 +70,16 @@ export const Navbar: React.FC = () => {
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    setMobileMenuOpen(false);
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+      document.body.style.overflow = '';
+    }
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.history.pushState) {
+        window.history.pushState(null, '', href);
+      }
     }
   };
 
@@ -86,7 +92,7 @@ export const Navbar: React.FC = () => {
           : 'py-5 sm:py-7 bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="container-editorial flex items-center justify-between">
         
         {/* Brand Logo with red accent dot */}
         <a

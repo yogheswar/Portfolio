@@ -22,10 +22,10 @@ export const ProjectRow: React.FC<ProjectRowProps> = ({
       id={`project-row-${project.id}`}
       onMouseEnter={() => onHover(project.id)}
       onClick={() => onSelect(project)}
-      className={`group relative border-b border-white/[0.08] py-8 sm:py-12 lg:py-16 transition-all duration-300 cursor-pointer w-full ${
+      className={`group relative border-b border-white/[0.08] py-8 sm:py-12 lg:py-16 px-2 sm:px-4 lg:px-6 rounded-sm transition-all duration-300 cursor-pointer w-full ${
         isHovered
-          ? 'bg-white/[0.02] lg:-mx-4 lg:px-4'
-          : ''
+          ? 'bg-white/[0.02]'
+          : 'bg-transparent'
       } ${isMuted ? 'opacity-30' : 'opacity-100'}`}
     >
       {/* Expanding Red Accent Line at Bottom */}

@@ -11,9 +11,9 @@ export const Projects: React.FC = () => {
   return (
     <section
       id="projects"
-      className="relative py-20 sm:py-32 lg:py-44 border-b border-white/[0.08] overflow-hidden bg-[#050505] w-full max-w-full"
+      className="relative py-[clamp(4.5rem,7.5vw,9.5rem)] border-b border-white/[0.08] overflow-clip bg-[#050505] w-full"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 w-full">
+      <div className="container-editorial">
         
         {/* Section Heading & Tag */}
         <motion.div

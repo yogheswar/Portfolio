@@ -53,15 +53,15 @@ export const About: React.FC = () => {
     <section
       id="about"
       ref={sectionRef}
-      className="relative py-20 sm:py-32 lg:py-44 border-b border-white/[0.08] overflow-hidden bg-[#050505] w-full max-w-full"
+      className="relative py-[clamp(4.5rem,7.5vw,9.5rem)] border-b border-white/[0.08] overflow-clip bg-[#050505] w-full"
     >
       {/* Background ambient red glow */}
       <div className="absolute top-1/2 left-0 w-[280px] sm:w-[420px] h-[280px] sm:h-[420px] bg-[#E50914]/[0.02] rounded-full blur-[100px] sm:blur-[140px] pointer-events-none -translate-y-1/2" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 w-full">
+      <div className="container-editorial">
         
         {/* TOP EDITORIAL SECTION: Left (ABOUT + bar), Center (Headline), Right (Bio) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start mb-16 sm:mb-24 lg:mb-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-14 items-start mb-12 sm:mb-20 lg:mb-24">
           
           {/* LEFT: Section Badge + ABOUT + Vertical Red Line */}
           <motion.div
@@ -69,7 +69,7 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-3 flex flex-col space-y-3 sm:space-y-4"
+            className="md:col-span-2 lg:col-span-3 flex flex-col space-y-3 sm:space-y-4"
           >
             {/* Red dot + ABOUT */}
             <div className="flex items-center gap-2">
@@ -101,7 +101,7 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 space-y-3 sm:space-y-4"
+            className="md:col-span-1 lg:col-span-5 space-y-3 sm:space-y-4"
           >
             <span className="text-[11px] sm:text-xs font-mono tracking-[0.2em] sm:tracking-[0.25em] text-[#E50914] uppercase block font-semibold">
               ENGINEERING PHILOSOPHY
@@ -119,7 +119,7 @@ export const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-4 lg:pt-5"
+            className="md:col-span-1 lg:col-span-4 lg:pt-5"
           >
             <p className="text-sm sm:text-base text-[#9E9EA4] font-normal leading-relaxed text-left">
               I am Yogheswar, an Information Technology undergraduate at KGISL Institute of Technology with a strong interest in building scalable software solutions and cloud-native applications. I enjoy developing full-stack web applications while exploring cloud computing, DevOps, containerization, and system design to create reliable and efficient systems.
